@@ -6,9 +6,9 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 public class JSONGetter  extends Thread{
-    public String jsonIn;
+    private String jsonIn;
     public static String url;
-    public String outJson;
+    private String outJson;
 
     private String readAll(Reader rd) throws IOException{
         StringBuilder sb =new StringBuilder();
@@ -24,9 +24,9 @@ public class JSONGetter  extends Thread{
         InputStream is = null;
         try{
             HttpURLConnection httpURLConnection = (HttpURLConnection)new URL(url).openConnection();
-            httpURLConnection.setRequestProperty("X-RapidAPI-Key", "62964ed641msh2a22b3b7a8030ccp16db69jsnfdb46e1120e7");
-            httpURLConnection.setRequestProperty("X-RapidAPI-Host", "community-open-weather-map.p.rapidapi.com");
-            httpURLConnection.setRequestMethod("GET");
+//            httpURLConnection.setRequestProperty("X-RapidAPI-Key", "62964ed641msh2a22b3b7a8030ccp16db69jsnfdb46e1120e7");
+//            httpURLConnection.setRequestProperty("X-RapidAPI-Host", "community-open-weather-map.p.rapidapi.com");
+//            httpURLConnection.setRequestMethod("GET");
 
             is = httpURLConnection.getInputStream();
             try {
